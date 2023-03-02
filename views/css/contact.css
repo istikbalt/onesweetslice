@@ -1,0 +1,102 @@
+/* Center the content */
+
+  
+  /* Style the form */
+  form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: 1px solid #45a049;
+  }
+  h1{
+    margin-left: 800px;
+  }
+  
+  form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  form input[type=text], 
+  form input[type=email], 
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  form textarea {
+    height: 200px;
+  }
+  
+  form input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  form input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe;
+    padding: 10px;
+  }
+  
+  header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    
+  }
+  
+  header h1 {
+    font-size: 24px;
+    color: #ff3333;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+
+  footer {
+    background-color: #fefefe;;
+    border-top: 1px solid #fefefe;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+  
+  footer a:hover {
+    color: #f26726;
+  }
+  
