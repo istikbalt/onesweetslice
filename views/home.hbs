@@ -3,13 +3,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-     <link rel="stylesheet" type="text/css" href="/css/theme.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <title>Baby Search</title>
 </head>
 <body>
     {{>header}}
+    
     <div class="maincontent">
-        <h1>Welcome Home Page</h1>
+            <div class="searchContainer">
+            <label for="searchBox">Search for a baby:</label>
+            <input type="text" id="searchBox" name="searchBox">
+            <button id="searchButton">Search</button>
+        </div>
+                <div class="resultsContainer">
+            <div class="pictureContainer">
+                <img src="./images/mainpicture.jpeg" alt="baby picture">
+            </div>
+           
+        </div>
     </div>
     
     {{>footer}}

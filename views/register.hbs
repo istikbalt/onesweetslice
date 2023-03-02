@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New user Registration - CAP805 winter 2023</title>
+        <link rel="stylesheet" href="./css/register.css" />
+    </head>
+    <body>
+          
+
+        <div class="container">
+            <!-- HEADER -->
+          {{> header }}
+            <!-- CONTENT -->
+            <div class="contentContainer">
+                <h1>CAP805 w2023 Registration</h1>
+                
+                <form method="post" action="/register">
+                    <label class="fixedlabel">Username</label>
+                    <input name="username" type="text"><br/>
+					
+                    <label class="fixedlabel">Password</label>
+                    <input name="password" type="password"><br/>
+					
+							
+					<label class="fixedlabel">First name</label>
+                    <input name="firstname" type="text"><br/>
+					
+					<label class="fixedlabel">Last name</label>
+                    <input name="lastname" type="text"><br/>
+					
+					<label class="fixedlabel">User type</label>
+                        <select name="usertype">
+                        <option value="">-- Select User Type --</option>
+                        <option value="friends">Friends</option>
+                        <option value="parents">Parents</option>
+                        <option value="admin">Admin</option>
+                    </select><br/>
+					
+					<label class="fixedlabel">Email</label>
+                    <input name="email" type="text"><br/>
+					
+					<label class="fixedlabel">Phone Number</label>
+                    <input name="phonenumber" type="text"><br/>
+					
+					<label class="fixedlabel">Address</label>
+                    <input name="address" type="text"><br/>
+					
+                    <label class="fixedlabel"></label>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div>
+
+            <!-- FOOTER -->
+            {{> footer }}
+        </div>
+    </body>
+</html>
