@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="./css/search.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+ {{>header}}
+  <h1>Baby Registry</h1>
+  <form>
+    <label for="giftCategory">Gift Category:</label>
+    <select id="giftCategory" name="giftCategory" onchange="showItems()">
+      <option value="clothing">Clothing</option>
+      <option value="toys">Toys</option>
+      <option value="nursery">Nursery</option>
+      <option value="diapering">Diapering</option>
+    </select><br><br>
+  </form>
+  
+  <div id="itemsContainer"></div>
+
+  <script>
+    function showItems() {
+      var category = document.getElementById("giftCategory").value;
+      var items = getItemsForCategory(category);
+      var container = document.getElementById("itemsContainer");
+      container.innerHTML = "";
+      
+      items.forEach(function(item) {
+        var itemDiv = document.createElement("div");
+        itemDiv.innerHTML = `
+          <img src="${item.image}">
+          <h3>${item.name}</h3>
+          <p>${item.price}</p>
+          <button onclick="addToCart('${item.name}', '${item.price}')">Add to Cart</button>
+        `;
+        container.appendChild(itemDiv);
+      });
+    }
+
+    function getItemsForCategory(category) {
+      // you can use a database or hardcode items here based on the category
+      if (category === "clothing") {
+        return [
+          { name: "Baby Onesie", price: "$10.99", image: "./images/clothes.jpg" },
+          { name: "Baby Pants", price: "$8.99", image: "./images/clothes.jpg" },
+          { name: "Baby Socks", price: "$4.99", image: "./images/clothes.jpg" }
+        ];
+      } else if (category === "toys") {
+        return [
+          { name: "Stuffed Animal", price: "$12.99", image: "./images/toys.jpg" },
+          { name: "Rattle", price: "$6.99", image: "./images/toys.jpg" },
+          { name: "Baby Book", price: "$9.99", image: "./images/toys.jpg" }
+        ];
+      } else if (category === "nursery") {
+        return [
+          { name: "Crib Sheets", price: "$19.99", image: "./images/nursery.jpg" },
+          { name: "Changing Pad Cover", price: "$8.99", image: "./images/nursery.jpg" },
+          { name: "Baby Blanket", price: "$24.99", image: "./images/nursery.jpg" }
+        ];
+      } else if (category === "diapering") {
+        return [
+          { name: "Diaper Bag", price: "$49.99", image: "./images/daiper.jpg" },
+          { name: "Diapers", price: "$0.50 each", image: "./images/daiper.jpg" },
+          { name: "Wipes", price: "$5.99", image: "./images/daiper.jpg" }
+        ];
+      }
+    }
+
+    function addToCart(name, price) {
+      // implement adding item to cart here
+      console.log(`Added ${name} to cart for ${price}`);
+    }
+  </script>
+
+    </div>
+    
+    {{>footer}}
+</body>
+</html>

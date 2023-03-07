@@ -20,6 +20,6 @@ app.get("/parents",(req,res)=> {res.render("parents",{layout:false})});
 app.get("/about",(req,res)=> {res.render("about",{layout:false})});
 app.get("/contact",(req,res)=> {res.render("contact",{layout:false})});
 app.get("/register",(req,res)=> {res.render("register",{layout:false})});
-
+app.get("/search",(req,res)=> {res.render("search",{layout:false})});
 
 app.listen(HTTP_PORT,OnHttpStart);
